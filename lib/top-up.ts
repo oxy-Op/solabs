@@ -18,7 +18,7 @@ export async function topup(address: string) {
 
     const transaction = new Transaction().add(
       SystemProgram.transfer({
-        fromPubkey: new PublicKey(""),
+        fromPubkey: new PublicKey(signer.publicKey),
         toPubkey: new PublicKey(address),
         lamports: 5_000_000_00,
       })
