@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SolAbs - Solana Account Abstraction with Social Login
+
+A modern implementation of account abstraction on Solana, featuring social login integration and seamless payment processing. This project demonstrates how to create non-custodial wallets with Web2 authentication methods.
+
+## Overview
+
+SolAbs simplifies the Web3 onboarding experience by allowing users to interact with Solana blockchain using familiar Web2 authentication methods. Each user automatically gets a non-custodial wallet upon social login, with secure key management and encryption.
+
+## Key Features
+
+- **Social Authentication**
+
+  - Google and GitHub login integration
+  - Automatic wallet creation on first login
+  - Non-custodial key management
+  - WebAuthn support for hardware security
+
+- **Secure Key Management**
+
+  - AES-256-CBC encryption for private keys
+  - Secure key storage in MongoDB
+  - Zero plaintext exposure of sensitive data
+
+- **Payment Integration**
+  - Stripe payment processing
+  - Automatic SOL top-up after payment
+  - Real-time balance updates
+  - Secure webhook handling
+
+## Technology Stack
+
+- Next.js 14 (App Router)
+- TypeScript
+- MongoDB with Prisma ORM
+- NextAuth.js v5
+- Stripe Payment Integration
+- Solana Web3.js
+
+## Project Status
+
+⚠️ **Important Notice**: This project is currently a work in progress and serves as a demonstration of account abstraction implementation on Solana. While the core functionality works, it is not recommended for production use without thorough security audits and additional testing.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/sol-abs.git
+cd sol-abs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Set up environment variables
 
-## Learn More
+```env
+DATABASE_URL="your_mongodb_url"
+ENCRYPTION_KEY="your_32_byte_key"
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="your_stripe_key"
+STRIPE_SECRET_KEY="your_stripe_secret"
+STRIPE_WEBHOOK_SECRET="your_webhook_secret"
+NEXT_PUBLIC_DOMAIN="your_domain"
+RPC_URL="your_solana_rpc_url"
+PRIVATE_KEY="your_solana_private_key"
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Run development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+This project is open source and we welcome contributions. Whether it's:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Bug fixes
+- Feature additions
+- Documentation improvements
+- Security enhancements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Please feel free to:
+
+1. Fork the repository
+2. Create your feature branch
+3. Submit a pull request
+
+## License
+
+MIT License - feel free to use this code for your own projects.
+
+## Disclaimer
+
+This project is meant to demonstrate the implementation of account abstraction and social login integration with Solana. It is not feature-complete and should be thoroughly reviewed and tested before any production use.
+
+## Contact
+
+For inquiries about custom implementations or consulting, please reach out through GitHub issues or discussions.
