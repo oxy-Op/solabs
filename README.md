@@ -45,7 +45,7 @@ SolAbs simplifies the Web3 onboarding experience by allowing users to interact w
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/sol-abs.git
+git clone https://github.com/yourusername/solabs.git
 cd sol-abs
 ```
 
